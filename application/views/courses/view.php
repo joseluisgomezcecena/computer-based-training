@@ -108,7 +108,7 @@
 									</button>
 									<div class="dropdown-menu">
 										<a class="dropdown-item" href="<?php echo base_url() ?>content/<?php echo $row['course_id'] ?>">Editar</a>
-										<a class="dropdown-item" href="<?php echo base_url() ?>content/edit/<?php echo $row['course_id'] ?>">Eliminar</a>
+										<a class="dropdown-item" href="<?php echo base_url() ?>content/update/<?php echo $row['course_id'] ?>">Eliminar</a>
 									</div>
 								</div>
 								<span class="badge bg-primary rounded-pill text-white">Orden: <?php echo $row['order'] ?></span>
