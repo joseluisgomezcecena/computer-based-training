@@ -32,10 +32,53 @@
 		<h4><?= $title ?></h4>
 
 
+		<div class="my-form-container mb-5">
+			<?php echo form_open(base_url() . 'courses/update/' . $course_item['course_id']); ?>
+			<div class="row mb-3">
+				<label class="col-sm-2 col-form-label" for="basic-default-name">Nombre del curso</label>
+				<div class="col-sm-10">
+					<input type="text" name="course_name" class="form-control" id="basic-default-name" value="<?php echo $course_item['course_name'] ?>" placeholder="Nombre del curso." />
+				</div>
+			</div>
+
+
+			<div class="row mb-3">
+				<label class="col-sm-2 col-form-label" for="basic-default-name">Departamentos</label>
+				<div class="col-sm-10">
+					<select style="width: 100%" class="js-example-basic-multiple" name="departments[]" multiple="multiple">
+						<?php foreach ($departments as $department): ?>
+							<option value="<?php echo $department['department_id']; ?>"><?php echo $department['department_name']; ?></option>
+						<?php endforeach; ?>
+					</select>
+				</div>
+			</div>
+
+
+			<div class="row mb-3">
+				<label class="col-sm-2 col-form-label" for="basic-default-name">Usuarios especificos</label>
+				<div class="col-sm-10">
+					<select style="width: 100%" class="js-example-basic-multiple" name="users[]" multiple="multiple">
+						<?php foreach ($users as $user): ?>
+							<option value="<?php echo $user['user_id']; ?>"><?php echo $user['user_email']; ?>| <?php echo $user['user_name']; ?> <?php echo $user['user_lastname']; ?></option>
+						<?php endforeach; ?>
+					</select>
+				</div>
+			</div>
+
+
+			<div class="row justify-content-end">
+				<div class="col-sm-12">
+					<button type="submit" class="btn btn-primary">Guardar</button>
+				</div>
+			</div>
+			<?php echo form_close(); ?>
+		</div>
+
+
 
 		<div class="m-t-25">
 
-			<a href="javascript:void(0);" class="reorder_link btn btn-primary mb-5" id="saveReorder">Reordenar Contenido</a>
+			<a href="javascript:void(0);" class="reorder_link btn btn-primary mb-5 mt-5" id="saveReorder">Reordenar Contenido</a>
 
 
 			<div id="reorderHelper" class="light_box mb-5" style="display:none;">1. Arrastra los cursos para reordenar.<br>2. Haz Click en 'Guardar Cambios' cuando hayas terminado.</div>
@@ -59,7 +102,16 @@
 										-->
 									</a>
 								</div>
-								<span class="badge bg-primary rounded-pill text-white"><?php echo $row['order'] ?></span>
+								<div class="dropdown dropdown-animated mr-5">
+									<button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+										<span>Acciones</span>
+									</button>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="<?php echo base_url() ?>content/<?php echo $row['course_id'] ?>">Editar</a>
+										<a class="dropdown-item" href="<?php echo base_url() ?>content/edit/<?php echo $row['course_id'] ?>">Eliminar</a>
+									</div>
+								</div>
+								<span class="badge bg-primary rounded-pill text-white">Orden: <?php echo $row['order'] ?></span>
 							</li>
 
 

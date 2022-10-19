@@ -26,7 +26,6 @@ class Courses extends CI_Controller
 		$data['course_item'] = $this->CourseModel->get_courses($id);
 		$data['contents'] = $this->ContentModel->get_content($id);
 
-
 		if (empty($data['course_item']))
 		{
 			show_404();
