@@ -2,14 +2,14 @@
 					<div class="row">
 						<div class="col-lg-8 mb-4 order-0">
 
-							<div style="background-image: url('<?php echo base_url() ?>assets/img/elements/background2.jpg'); background-size: contain; background-position: bottom center" class="card">
+							<div style="background-image: url('<?php echo base_url() ?>assets/img/elements/background3.jpg'); background-size: cover; background-position: center center; height: 420px" class="card">
 								<div class="d-flex align-items-end row">
 									<div class="col-sm-7">
 										<div class="card-body">
-											<h5 class="card-title text-white">Computer Based Training V2.0 💻</h5>
-											<p class="mb-4">Ingresa tu usuario y contraseña para accesar a los entrenamientos que te corresponden.</p>
-											<br>
-											<a href="<?php echo base_url() ?>admins" class="btn btn-secondary">Ingresar</a>
+											<h5 style="font-weight: bold;" class="card-title text-white">Computer Based Training V2.0 💻🧠</h5>
+											<p class="mb-4 text-white">Ingresa tu usuario y contraseña para accesar a los entrenamientos que te corresponden.</p>
+											<br><br><br>
+											<a href="<?php echo base_url() ?>users/login" class="btn btn-secondary">Ingresar</a>
 										</div>
 									</div>
 									<div class="col-sm-5 text-center text-sm-left">
@@ -23,22 +23,22 @@
 							</div>
 						</div>
 						<div class="col-lg-4 col-sm-12 col-md-12 mb-4 order-1">
-							<div class="card">
+							<div style="height: 420px;" class="card">
 								<div class="card-body">
 									<div class="d-flex justify-content-between flex-sm-row flex-column gap-3">
 										<div class="d-flex flex-sm-column flex-row align-items-start justify-content-between">
 											<div class="card-title">
-												<h5 class="text-nowrap mb-2">Registro y Login</h5>
-												<small class="text-dark fw-semibold">Debe tener una cuenta de Software de Martech Medical para ingresar.</small>
+												<h5 style="font-weight: bolder;" class="text-nowrap mb-2">Registro y Login</h5>
+												<small class="text-dark fw-semibold mb-5">Debe tener una cuenta de Software de Martech Medical para ingresar.</small>
 												<div>
-													<br>
+													<br><br><br><br/>
 													<!--
 													<a href="<?php echo base_url() ?>users/login" class="btn btn-dark mt-2">Inicio de Sesión</a>
 													<br><br>
 													-->
-													<a href="<?php echo base_url() ?>users/login" class="mt-5">Obtener cuenta ></a>
+													<a href="http://mxmtsvrandon1/authentication/index.php/home/register" target="_blank" class="mt-5">Obtener cuenta ></a>
 													<br><br>
-													<a href="<?php echo base_url() ?>users/login" class="mt-5">Olvide mi contraseña ></a>
+													<a href="http://mxmtsvrandon1/authentication/index.php/reset-password" target="_blank" class="mt-5">Olvide mi contraseña ></a>
 												</div>
 
 											</div>
