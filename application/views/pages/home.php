@@ -7,9 +7,23 @@
 									<div class="col-sm-7">
 										<div class="card-body">
 											<h5 style="font-weight: bold;" class="card-title text-white">Computer Based Training V2.0 💻🧠</h5>
+
+											<?php if(isset($this->session->userdata['logged_in'])): ?>
+												<h5 style="font-weight: bold; margin-top: -10px;" class="card-title text-white">Bienvenido <?php echo $this->session->userdata['user_id']['user_name']; ?> !</h5>
+											<?php endif; ?>
+
 											<p class="mb-4 text-white">Ingresa tu usuario y contraseña para accesar a los entrenamientos que te corresponden.</p>
 											<br><br><br>
-											<a href="<?php echo base_url() ?>users/login" class="btn btn-secondary">Ingresar</a>
+											<a href="<?php echo base_url() ?>users/login" class="btn btn-secondary">
+												<?php if(isset($this->session->userdata['logged_in'])): ?>
+													Ver Los Entrenamientos De <?php echo $this->session->userdata['user_id']['user_name']; ?>
+												<?php else: ?>
+													Ingresar
+												<?php endif; ?>
+
+
+
+											</a>
 										</div>
 									</div>
 									<div class="col-sm-5 text-center text-sm-left">
