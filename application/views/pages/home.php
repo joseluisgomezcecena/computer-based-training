@@ -20,9 +20,6 @@
 												<?php else: ?>
 													Ingresar
 												<?php endif; ?>
-
-
-
 											</a>
 										</div>
 									</div>
