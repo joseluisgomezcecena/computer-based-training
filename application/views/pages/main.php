@@ -37,17 +37,20 @@
 
 	<div id="pendingdiv" class="card-container mt-5 row">
 
-			<?php foreach ($courses['cursos'] as $course): ?>
+			<?php foreach ($courses as $course): ?>
 
 			<div class="col-lg-4">
 
 
 			<div class="card ">
-				<img src="<?php # echo base_url() . $course['thumbnail'] ?>" class="card-img-top" alt="...">
+				<img src="<?php  echo base_url() . $course['thumbnail'] ?>" class="card-img-top" alt="...">
 				<div class="card-body">
 					<h5 class="card-title"><?php echo $course['course_name'] ?> <?php echo $course['course_id'] ?></h5>
-					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					<a href="#" class="btn btn-primary">Tomar Entrenamiento</a>
+					<p class="card-text">
+						Contenido: <b><?php echo $course['number'] ?></b> Videos o Documentos. <br>
+						Creado: <?php echo date_format(date_create($course['created_at']),"M/d/Y")  ?> A las <?php echo date_format(date_create($course['created_at']),"H:i")  ?>
+					</p>
+					<a href="<?php echo base_url() ?>playlists/<?php echo $course['course_id'] ?>" class="btn btn-primary">Tomar Entrenamiento</a>
 				</div>
 			</div>
 

@@ -3,15 +3,18 @@
 	<div class="side-nav-inner">
 		<ul class="side-nav-menu scrollable">
 			<li class="nav-item dropdown open">
-				<a class="dropdown-toggle" href="javascript:void(0);">
+				<a class="dropdown-toggle" href="<?php echo base_url() ?>main">
                                 <span class="icon-holder">
-                                    <i class="anticon anticon-dashboard"></i>
+                                    <i class="anticon anticon-laptop"></i>
                                 </span>
-					<span class="title">Dashboard</span>
+					<span class="title">Pagina Principal</span>
+					<!--
 					<span class="arrow">
-                                    <i class="arrow-icon"></i>
-                                </span>
+                        <i class="arrow-icon"></i>
+                    </span>
+                    -->
 				</a>
+				<!--
 				<ul class="dropdown-menu">
 					<li>
 						<a href="index.html">Default</a>
@@ -26,104 +29,52 @@
 						<a href="index-projects.html">Projects</a>
 					</li>
 				</ul>
+				-->
 			</li>
 			<li class="nav-item dropdown">
 				<a class="dropdown-toggle" href="javascript:void(0);">
-                                <span class="icon-holder">
-                                    <i class="anticon anticon-appstore"></i>
-                                </span>
-					<span class="title">Apps</span>
+					<span class="icon-holder">
+						<i class="anticon anticon-appstore"></i>
+					</span>
+					<span class="title">Entrenamientos</span>
 					<span class="arrow">
-                                    <i class="arrow-icon"></i>
-                                </span>
+						<i class="arrow-icon"></i>
+					</span>
 				</a>
+
 				<ul class="dropdown-menu">
 					<li>
-						<a href="app-chat.html">Chat</a>
+						<a href="app-chat.html">Mis entrenamientos</a>
 					</li>
 					<li>
-						<a href="app-file-manager.html">File Manager</a>
-					</li>
-					<li>
-						<a href="app-mail.html">Mail</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a href="javascript:void(0);">
-							<span>Projects</span>
-							<span class="arrow">
-                                            <i class="arrow-icon"></i>
-                                        </span>
-						</a>
-						<ul class="dropdown-menu">
-							<li>
-								<a href="app-project-list.html">Project List</a>
-							</li>
-							<li>
-								<a href="app-project-details.html">Project Details</a>
-							</li>
-						</ul>
-					</li>
-					<li class="nav-item dropdown">
-						<a href="javascript:void(0);">
-							<span>E-commerce</span>
-							<span class="arrow">
-                                            <i class="arrow-icon"></i>
-                                        </span>
-						</a>
-						<ul class="dropdown-menu">
-							<li>
-								<a href="app-e-commerce-order-list.html">Orders List</a>
-							</li>
-							<li>
-								<a href="app-e-commerce-products.html">Products</a>
-							</li>
-							<li>
-								<a href="app-e-commerce-products-list.html">Products List</a>
-							</li>
-							<li>
-								<a href="app-e-commerce-products-edit.html">Products Edit</a>
-							</li>
-						</ul>
+						<a href="app-file-manager.html">Todos los entrenamientos</a>
 					</li>
 				</ul>
 			</li>
+
+
+
 			<li class="nav-item dropdown">
 				<a class="dropdown-toggle" href="javascript:void(0);">
                                 <span class="icon-holder">
 									<i class="anticon anticon-build"></i>
 								</span>
-					<span class="title">UI Elements</span>
+					<span class="title">Reportes</span>
 					<span class="arrow">
-									<i class="arrow-icon"></i>
-								</span>
+						<i class="arrow-icon"></i>
+					</span>
 				</a>
 				<ul class="dropdown-menu">
 					<li>
-						<a href="avatar.html">Avatar</a>
+						<a href="avatar.html">Mis entrenamientos y Examenes</a>
 					</li>
 					<li>
-						<a href="alert.html">Alert</a>
+						<a href="alert.html">Reportes (Admin)</a>
 					</li>
-					<li>
-						<a href="badge.html">Badge</a>
-					</li>
-					<li>
-						<a href="buttons.html">Buttons</a>
-					</li>
-					<li>
-						<a href="cards.html">Cards</a>
-					</li>
-					<li>
-						<a href="icons.html">Icons</a>
-					</li>
-					<li>
-						<a href="lists.html">Lists</a>
-					</li>
-					<li>
-						<a href="typography.html">Typography</a>
-					</li>
+
 				</ul>
 			</li>
+			<!--
 			<li class="nav-item dropdown">
 				<a class="dropdown-toggle" href="javascript:void(0);">
                                 <span class="icon-holder">
@@ -271,43 +222,7 @@
 					</li>
 				</ul>
 			</li>
-			<li class="nav-item dropdown">
-				<a class="dropdown-toggle" href="javascript:void(0);">
-                                <span class="icon-holder">
-                                    <i class="anticon anticon-lock"></i>
-                                </span>
-					<span class="title">Authentication</span>
-					<span class="arrow">
-                                    <i class="arrow-icon"></i>
-                                </span>
-				</a>
-				<ul class="dropdown-menu">
-					<li>
-						<a href="login-1.html">Login 1</a>
-					</li>
-					<li>
-						<a href="login-2.html">Login 2</a>
-					</li>
-					<li>
-						<a href="login-3.html">Login 3</a>
-					</li>
-					<li>
-						<a href="sign-up-1.html">Sign Up 1</a>
-					</li>
-					<li>
-						<a href="sign-up-2.html">Sign Up 2</a>
-					</li>
-					<li>
-						<a href="sign-up-3.html">Sign Up 3</a>
-					</li>
-					<li>
-						<a href="error-1.html">Error 1</a>
-					</li>
-					<li>
-						<a href="error-2.html">Error 2</a>
-					</li>
-				</ul>
-			</li>
+			-->
 		</ul>
 	</div>
 </div>

@@ -45,6 +45,12 @@ class ContentModel extends CI_Model
 	}
 
 
+	public function get_item($id)
+	{
+		$query = $this->db->get_where('content', array('content_id' => $id));
+		return $query->row_array();
+	}
+
 
 	/*
      * Update file data into the database

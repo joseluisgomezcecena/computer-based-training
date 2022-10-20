@@ -1,15 +1,14 @@
 </div>
-</div>
 <!-- Content Wrapper END -->
 
 <!-- Footer START -->
 <footer class="footer container">
-	<div class="footer-content">
+	<div class="footer-content col-lg-12">
 		<p class="m-b-0">2018 - <?php echo date("Y") ?> Martech Medical West Continuous Improvement Software.</p>
 		<span>
-                            <a href="" class="text-gray m-r-15">Term &amp; Conditions</a>
-                            <a href="" class="text-gray">Privacy &amp; Policy</a>
-                        </span>
+			<a href="" class="text-gray m-r-15">Term &amp; Conditions</a>
+			<a href="" class="text-gray">Privacy &amp; Policy</a>
+		</span>
 	</div>
 </footer>
 <!-- Footer END -->

@@ -46,6 +46,11 @@
 			background-color: rgba(14, 14, 14, 0.18);
 			border-radius: 15px;
 		}
+
+		.header .logo {
+			border-right: 1px solid #2a2a2a;
+		}
+
 	</style>
 
 	<!--

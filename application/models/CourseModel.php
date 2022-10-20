@@ -51,18 +51,27 @@ class CourseModel extends CI_Model
 			$this->db->select('*');
 			$this->db->from('content');
 			$this->db->where('course_id=',  $course_id );
-			$this->db->order_by('content_id', 'ASC');
-			$this->db->limit(1);
-			$query = $this->db->get();
-			$thumbnails = $query->row_array();
-			$thumbnail = $thumbnails['thumbnail'];
+			$query_num = $this->db->get();
+			$num_rows = $query_num->num_rows();
+			if($num_rows > 0)
+			{
+				$this->db->select('*');
+				$this->db->from('content');
+				$this->db->where('course_id=',  $course_id );
+				$this->db->order_by('content_id', 'ASC');
+				$this->db->limit(1);
+				$query_thumb = $this->db->get();
+				$thumbnails = $query_thumb->row_array();
+				$thumbnail = $thumbnails['thumbnail'];
 
-			$result[] = array(
-				'course_id' => $course_id,
-				'course_name' => $course_name,
-				'thumbnail' => $thumbnail,
-				'created_at' => $course_user_date
-			);
+				$result[] = array(
+					'course_id' => $course_id,
+					'course_name' => $course_name,
+					'thumbnail' => $thumbnail,
+					'number'=> $num_rows,
+					'created_at' => $course_user_date
+				);
+			}
 		}
 
 		return $result;

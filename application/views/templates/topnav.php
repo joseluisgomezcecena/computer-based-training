@@ -2,17 +2,17 @@
 <div class="app">
 	<div class="layout">
 		<!-- Header START -->
-		<div class="header">
+		<div style="background-color: #2a2a2a; " class="header">
 			<div class="logo logo-dark">
-				<a href="index.html">
-					<img src="assets/images/logo/logo.png" alt="Logo">
-					<img class="logo-fold" src="assets/images/logo/logo-fold.png" alt="Logo">
+				<a href="<?php echo base_url() ?>main">
+					<img style="margin-top: 10px;" src="<?php echo base_url() ?>assets/img/icons/logo.png" alt="Logo">
+					<img style="margin-top: 10px;" class="logo-fold" src="<?php echo base_url() ?>assets/img/icons/logo.png" alt="Logo">
 				</a>
 			</div>
 			<div class="logo logo-white">
-				<a href="index.html">
-					<img src="assets/images/logo/logo-white.png" alt="Logo">
-					<img class="logo-fold" src="assets/images/logo/logo-fold-white.png" alt="Logo">
+				<a href="<?php echo base_url() ?>main">
+					<img style="margin-top: 10px;" src="<?php echo base_url() ?>assets/img/icons/logo.png" alt="Logo">
+					<img style="margin-top: 10px;" class="logo-fold" src="<?php echo base_url() ?>assets/img/icons/logo.png" alt="Logo">
 				</a>
 			</div>
 			<div class="nav-wrap">

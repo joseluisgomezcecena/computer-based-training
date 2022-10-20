@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+//admins
 $route['courses/create'] = 'courses/create';
 $route['courses/(:any)'] = 'courses/view/$1';
 $route['courses/update/(:any)'] = 'courses/update/$1';
@@ -12,6 +13,10 @@ $route['content/create/(:any)'] = 'content/create/$1';
 $route['content/update/(:any)'] = 'content/update/$1';
 $route['content/delete/(:any)'] = 'content/delete/$1';
 
+
+
+//users
+$route['playlists/(:any)'] = 'playlists/index/$1';
 
 
 
