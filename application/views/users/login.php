@@ -22,10 +22,15 @@
 
 						<?php if($this->session->flashdata('login_failed')): ?>
 
-							<div class="alert alert_danger">
-								<strong class="uppercase"><bdi>No autorizado:</bdi></strong>
-								usuario y/o contraseña incorrectos.
-								<button type="button" class="dismiss la la-times" data-dismiss="alert"></button>
+
+							<div class="alert alert-danger alert-dismissible fade show" role="alert">
+								<div class="d-flex align-items-center justify-content-start">
+									<span class="alert-icon">
+										<i class="anticon anticon-close-o"></i>
+									</span>
+									<span>Usuario o contraseña incorrectos, recuerda que <b>tu usuario es tu correo electronico de la empresa.</b></span>
+								</div>
+
 							</div>
 
 						<?php endif; ?>
@@ -43,10 +48,10 @@
 								<p class="m-b-30">Ingresa tus credenciales para acceder.</p>
 								<?php echo form_open(base_url() . 'users/login') ?>
 									<div class="form-group">
-										<label class="font-weight-semibold" for="userName">Usuario:</label>
+										<label class="font-weight-semibold" for="userName">Correo electronico:</label>
 										<div class="input-affix">
 											<i class="prefix-icon anticon anticon-user"></i>
-											<input type="text" class="form-control" name="username" id="userName" placeholder="Username">
+											<input type="email" class="form-control" name="username" id="userName" placeholder="Username">
 										</div>
 									</div>
 									<div class="form-group">

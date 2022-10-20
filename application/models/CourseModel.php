@@ -20,15 +20,69 @@ class CourseModel extends CI_Model
 			return $query->row_array();
 		}
 
-		$last_query = $this->db->last_query();
-		print_r($last_query);
-		/*
-		$this->db->select('*');
-		$this->db->from('courses');
-		$query = $this->db->get();
-		return $query->result_array();
-		*/
+		//$last_query = $this->db->last_query();
+		//print_r($last_query);
+
 	}
+
+
+	public function get_courses_pending($id = NULL)
+	{
+
+		$result = array();
+
+		$this->db->select('*');
+		$this->db->from('course_user');
+		$this->db->join('courses', 'courses.course_id = course_user.course_id');
+		$this->db->where('course_user.user_id=',  $id );
+		$this->db->where('course_user.completed=',  0 );
+		$this->db->order_by('course_user.course_user_id', 'DESC');
+		$query = $this->db->get();
+
+
+		$cursos = $query->result_array();
+
+		foreach ($cursos as $curso)
+		{
+			$course_id = $curso['course_id'];
+			$course_name = $curso['course_name'];
+			$course_user_date = $curso['created_at'];
+
+			$this->db->select('*');
+			$this->db->from('content');
+			$this->db->where('course_id=',  $course_id );
+			$this->db->order_by('content_id', 'ASC');
+			$this->db->limit(1);
+			$query = $this->db->get();
+			$thumbnails = $query->row_array();
+			$thumbnail = $thumbnails['thumbnail'];
+
+			$result[] = array(
+				'course_id' => $course_id,
+				'course_name' => $course_name,
+				'thumbnail' => $thumbnail,
+				'created_at' => $course_user_date
+			);
+		}
+
+		return $result;
+	}
+
+	public function get_pending_number($id = NULL)
+	{
+
+		$this->db->select('*');
+		$this->db->from('course_user');
+		$this->db->join('courses', 'courses.course_id = course_user.course_id');
+		$this->db->where('course_user.user_id=',  $id );
+		$this->db->where('course_user.completed=',  0 );
+		$query = $this->db->get();
+		return	$query->num_rows();
+
+	}
+
+
+
 
 
 

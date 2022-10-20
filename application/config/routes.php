@@ -12,6 +12,9 @@ $route['content/create/(:any)'] = 'content/create/$1';
 $route['content/update/(:any)'] = 'content/update/$1';
 $route['content/delete/(:any)'] = 'content/delete/$1';
 
+
+
+
 $route['users/login'] = 'users/login';
 
 
